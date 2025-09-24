@@ -4,6 +4,8 @@ const theme = extendTheme({
   cell_phone: {
     appBarHeight: '72px',
     maxWidthContent: '1200px',
+    sliderAppBarHeight: '26px',
+    sliderAppBarMaxContent: '1400px',
   },
   colorSchemes: {
     light: {
@@ -11,6 +13,9 @@ const theme = extendTheme({
         primary: {
           main: '#D70018',
         },
+        secondary: {
+          main: '#F9415D'
+        }
       },
     },
     dark: {
@@ -18,6 +23,9 @@ const theme = extendTheme({
         primary: {
           main: '#D70018',
         },
+        secondary: {
+          main: '#F9415D'
+        }
       },
     },
   },

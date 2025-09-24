@@ -15,13 +15,14 @@ import Button from "@mui/material/Button"
 import InputAdornment from '@mui/material/InputAdornment'
 import SvgIcon from "@mui/material/SvgIcon"
 import TextField from '@mui/material/TextField'
+import Typography from "@mui/material/Typography"
+
 import { ReactComponent as LogoIcon } from '../../assets/image.svg'
 import { ReactComponent as Slogo } from '../../assets/SLogo.svg'
-import { Typography } from "@mui/material"
-
+import SliderAppBar from "../SliderAppBar/SliderAppBar"
 
 const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: '#F9415D',
+  backgroundColor: `${theme.palette.secondary.main}`,
   borderRadius: '8px',
   textTransform: 'none',
   fontWeight: '500',
@@ -32,7 +33,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }))
 
 const StyledButtonForXS = styled(Button)(({ theme }) => ({
-  backgroundColor: '#F9415D',
+  backgroundColor: `${theme.palette.secondary.main}`,
   borderRadius: '8px',
   textTransform: 'none',
   fontWeight: '500',
@@ -72,7 +73,9 @@ function AppBar() {
 
   return (
     <Box sx={{ width: '100%', margin: '0 auto', backgroundColor: 'primary.main' }}>
-      <Box></Box>
+      <Box sx={{ width: '100%' }}>
+        <SliderAppBar />
+      </Box>
       <Box 
         sx={{ 
           maxWidth: (theme) => `${theme.cell_phone.maxWidthContent}`, 
