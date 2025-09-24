@@ -1,5 +1,3 @@
-import { useEffect, useRef, useState } from "react"
-
 import styled from "@emotion/styled"
 import Stack from "@mui/material/Stack"
 import Box from "@mui/material/Box"
@@ -22,29 +20,41 @@ const StyledIconBox = styled(Box)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  gap: 3,
+  gap: 1,
   paddingX: '4px'
 })
+
+const MarqueeContent = styled(Stack)`
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+`;
+
 
 function SliderAppBar() {
 
   return (
     <StyledContentBox>
       <Stack direction="row" spacing={2} sx={{ height: '100%', alignItems: 'flex-end', gap: 2, justifyContent: 'space-between', paddingX: 2 }}>
-        <Stack direction="row" spacing={2} sx={{ height: '100%', alignItems: 'flex-end', justifyContent: 'space-between'}}>
-            <StyledIconBox>
-              <CachedOutlinedIcon fontSize="small"/>
-              <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Thu cũ giá ngon - Lên đời tiết kiệm</Typography>
-            </StyledIconBox>
-            <StyledIconBox>
-              <LocalShippingOutlinedIcon fontSize="small"/>
-              <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Giao nhanh - Miễn phí cho đơn 300k</Typography>
-            </StyledIconBox>
-            <StyledIconBox>
-              <GppGoodOutlinedIcon fontSize="small"/>
-              <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Sản phẩm chính hãng - xuất VAT đầy đủ</Typography>
-            </StyledIconBox>
-        </Stack>
+        <MarqueeContent direction="row" spacing={2} sx={{ height: '100%', alignItems: 'flex-end', gap: 1 }}>
+          <StyledIconBox>
+            <CachedOutlinedIcon fontSize="small"/>
+            <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Thu cũ giá ngon - Lên đời tiết kiệm</Typography>
+          </StyledIconBox>
+          <StyledIconBox>
+            <LocalShippingOutlinedIcon fontSize="small"/>
+            <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Giao nhanh - Miễn phí cho đơn 300k</Typography>
+          </StyledIconBox>
+          <StyledIconBox>
+            <GppGoodOutlinedIcon fontSize="small"/>
+            <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Sản phẩm chính hãng - xuất VAT đầy đủ</Typography>
+          </StyledIconBox>   
+        </MarqueeContent>
         <Stack  direction='row' spacing={1} sx={{ height: '100%', alignItems: 'flex-end', justifyContent: 'space-between' }}>
           <StyledIconBox>
             <StorefrontIcon fontSize="small"/>
