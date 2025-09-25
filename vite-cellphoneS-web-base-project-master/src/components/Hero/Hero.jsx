@@ -123,7 +123,7 @@ function Hero() {
               </List>
             </ContentBox>
   
-            <ContentBox sx={{ color: 'black', flex: 3}}>
+            <ContentBox sx={{ color: 'black', flex: 3, maxWidth: '690px'}}>
               <ImageSlider />
             </ContentBox>
 
