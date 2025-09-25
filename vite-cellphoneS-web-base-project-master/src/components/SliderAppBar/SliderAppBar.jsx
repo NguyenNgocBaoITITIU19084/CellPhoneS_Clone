@@ -10,6 +10,7 @@ import CachedOutlinedIcon from '@mui/icons-material/CachedOutlined'
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined'
 
 const StyledContentBox = styled(Box)(({ theme }) => ({
+  color: 'white',
   backgroundColor: theme.palette.primary.main,
   height: theme.cell_phone.sliderAppBarHeight,
   maxWidth: theme.cell_phone.sliderAppBarMaxContent,
