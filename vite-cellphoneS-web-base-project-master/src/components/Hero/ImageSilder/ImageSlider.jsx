@@ -37,7 +37,7 @@ const CONTENTS = [
   {
     id: 6,
     title: 'HONOR PAD x7',
-    content: 'pin cực khủng mua ngay',
+    content: 'pin cực khủng',
     img: 'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/honor-pad-x7-home-0925.png'
   },
   {
@@ -60,15 +60,28 @@ function ImageSlider() {
     setNav1(sliderRef1);
     setNav2(sliderRef2);
   }, []);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 4000,
+    cssEase: "linear"
+  }
+
   return (
     <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-      <Slider arrows={false} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
+      <Slider {...settings} arrows={false} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
        {CONTENTS.map((item) => (
         <Box component="img" src={item.img} key={item.title}></Box>
        ))}
       </Slider>
       
       <Slider
+        {...settings}
         asNavFor={nav1}
         ref={slider => (sliderRef2 = slider)}
         slidesToShow={5}
@@ -77,9 +90,24 @@ function ImageSlider() {
         arrows={false}
       >
         {CONTENTS.map((item) => (
-          <Box key={item.id} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', ':hover': {backgroundColor: 'lightgray'}, maxWidth: '130px', minHeight: '70px' }}>
-            <Typography variant="span" component='div' textAlign='center' fontSize='small' fontWeight='bold'>{item.title}</Typography>
-            <Typography variant="span" component='div' textAlign='center' fontSize='small' fontWeight='bold'>{item.content}</Typography>
+          <Box
+            key={item.id}
+            sx={{ 
+              cursor: 'pointer',
+              maxWidth: '130px',
+              height: '70px'
+            }}>
+              <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginTop: '10px'
+              }}>
+                <Typography variant="span" component='div' textAlign='center' fontSize='small' fontWeight='bold'>{item.title}</Typography>
+                <Typography variant="span" component='div' textAlign='center' fontSize='small' fontWeight='bold'>{item.content}</Typography>
+              </Box>
+              
           </Box>
         ))}
       </Slider>
