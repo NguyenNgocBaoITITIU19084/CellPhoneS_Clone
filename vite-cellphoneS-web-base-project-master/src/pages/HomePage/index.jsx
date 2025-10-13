@@ -2,6 +2,7 @@ import Box from "@mui/material/Box"
 import AppBar from "~/components/AppBoard"
 import Banner from "~/components/Banner/Banner"
 import Hero from "~/components/Hero/Hero"
+import ProductSide from "~/components/ProductSide/ProductSide"
 
 function HomePage() {
   return (
@@ -9,6 +10,7 @@ function HomePage() {
         <AppBar />
         <Hero />
         <Banner/>
+        <ProductSide />
     </Box>
   )
 }
