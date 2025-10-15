@@ -20,7 +20,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ImageSlider from "./ImageSilder/ImageSlider"
 
 const HeroContainer = styled(Box)(({ theme }) => ({
-  height: theme.cell_phone.heroHeight,
+  maxHeight: theme.cell_phone.heroHeight,
   width: '100%',
   margin: '0 auto',
   marginTop: '10px',
@@ -131,7 +131,7 @@ function Hero() {
 
               <ContentBox sx={{ color: 'black', flex: 1}}>
                 <Box component='img' sx={{ height: '100%', width: '100%', objectFit: 'fill', borderRadius: '8px'}} src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/s25-0925-1.png" />
-               </ContentBox>
+              </ContentBox>
      
               <ContentBox sx={{ color: 'black', flex: 1}}>
                 <Box component='img' sx={{ height: '100%', width: '100%', objectFit: 'fill', borderRadius: '8px'}} src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/Camp-laptop-T9_Right-banner-1.png" />

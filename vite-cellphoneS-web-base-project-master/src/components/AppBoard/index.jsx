@@ -72,20 +72,20 @@ function AppBar() {
   }
 
   return (
-    <Box sx={{ width: '100%', margin: '0 auto', backgroundColor: 'primary.main' }}>
+    <Box sx={{ width: '100%', margin: '0 auto', backgroundColor: 'primary.main', position: 'fixed', top: 0, zIndex: 10 }}>
       <Box sx={{ width: '100%' }}>
         <SliderAppBar />
       </Box>
       <Box 
         sx={{ 
           maxWidth: (theme) => `${theme.cell_phone.maxWidthContent}`, 
-          height: (theme) => `${theme.cell_phone.appBarHeight}`, 
+          minHeight: (theme) => `${theme.cell_phone.appBarHeight}`, 
           margin: '0 auto',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
+          justifyContent: 'center'
         }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, paddingX: 2, justifyContent: 'space-between' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, paddingX: 2, justifyContent: 'space-between'}}>
             <SvgIcon component={LogoIcon} inheritViewBox sx={{ width: '170px', maxWidth: '170px', cursor: 'pointer', display: {xs: 'none', lg: 'block'} }}/>
             <SvgIcon component={Slogo} inheritViewBox sx={{ width: '40px', maxWidth: '40px', height: '45px', cursor: 'pointer', display: {xs: 'block', lg: 'none'} }}/>
             <StyledButton variant="contained" startIcon={<DashboardCustomizeIcon/>} endIcon={<ExpandMoreIcon/>} sx={{ minWidth: '155px', display: {xs: 'none', md: 'flex' ,lg: 'flex'}}}>Danh mục</StyledButton>
