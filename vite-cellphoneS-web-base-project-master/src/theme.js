@@ -5,7 +5,7 @@ const theme = extendTheme({
     appBarHeight: '72px',
     maxWidthContent: '1200px',
     sliderAppBarHeight: '26px',
-    sliderAppBarMaxContent: '1400px',
+    sliderAppBarMaxContent: '1200px',
     heroHeight: '380px',
     heroMaxContent: '1200px',
   },

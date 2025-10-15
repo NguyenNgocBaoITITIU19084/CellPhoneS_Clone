@@ -17,12 +17,18 @@ const StyledContentBox = styled(Box)(({ theme }) => ({
   margin: '0 auto',
 }))
 
+const ContentWrapper = styled(Box)({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: 1,
+  padding: '5px 5px 0 5px'
+})
+
 const StyledIconBox = styled(Box)({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 1,
-  paddingX: '4px'
+  gap: 0.2,
 })
 
 const MarqueeContent = styled(Stack)`
@@ -41,8 +47,8 @@ function SliderAppBar() {
 
   return (
     <StyledContentBox>
-      <Stack direction="row" spacing={2} sx={{ height: '100%', alignItems: 'flex-end', gap: 2, justifyContent: 'space-between', paddingX: 2 }}>
-        <MarqueeContent direction="row" spacing={2} sx={{ height: '100%', alignItems: 'flex-end', gap: 1 }}>
+      <ContentWrapper>
+        <MarqueeContent direction="row" spacing={0.5} sx={{ flex: '2' }}>
           <StyledIconBox>
             <CachedOutlinedIcon fontSize="small"/>
             <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Thu cũ giá ngon - Lên đời tiết kiệm</Typography>
@@ -54,9 +60,10 @@ function SliderAppBar() {
           <StyledIconBox>
             <GppGoodOutlinedIcon fontSize="small"/>
             <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Sản phẩm chính hãng - xuất VAT đầy đủ</Typography>
-          </StyledIconBox>   
+          </StyledIconBox>
+          
         </MarqueeContent>
-        <Stack  direction='row' spacing={1} sx={{ height: '100%', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+        <Stack  direction='row' spacing={1} sx={{ flex: '1', height: '100%', alignItems: 'flex-end', justifyContent: 'space-between' }}>
           <StyledIconBox>
             <StorefrontIcon fontSize="small"/>
             <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>Cửa Hàng Gần Bạn</Typography>
@@ -70,7 +77,8 @@ function SliderAppBar() {
             <Typography variant="span" component='span' fontSize='small' fontWeight='bold'>1800 2097</Typography>
           </StyledIconBox>
         </Stack>
-      </Stack>
+      </ContentWrapper>
+     
     </StyledContentBox>
   )
 }

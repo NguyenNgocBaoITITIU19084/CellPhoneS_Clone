@@ -9,9 +9,6 @@ function HomePage() {
     <Box sx={{ backgroundColor: 'white', height: '100vh', width: '100%' }}>
         <AppBar />
         <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
         <Banner/>
         <ProductSide />
         <ProductSide />

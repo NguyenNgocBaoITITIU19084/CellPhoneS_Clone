@@ -73,7 +73,7 @@ function AppBar() {
 
   return (
     <Box sx={{ width: '100%', margin: '0 auto', backgroundColor: 'primary.main', position: 'fixed', top: 0, zIndex: 10 }}>
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ maxWidth: '1200px', margin: '0 auto' }}>
         <SliderAppBar />
       </Box>
       <Box 
