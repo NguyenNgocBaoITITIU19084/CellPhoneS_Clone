@@ -21,6 +21,11 @@ const ListProductContainer = styled(Box)({
   flex: '6'
 })
 
+const ProductGridContainer = styled(Box)({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(4, 1fr)'
+})
+
 function ProductSide() {
 
   return (
@@ -42,7 +47,16 @@ function ProductSide() {
           <MobileBrands/>
 
           {/* Product Cards Container */}
-          <ProductCard/>
+          <ProductGridContainer>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+          </ProductGridContainer>
 
         </ListProductContainer>
 
