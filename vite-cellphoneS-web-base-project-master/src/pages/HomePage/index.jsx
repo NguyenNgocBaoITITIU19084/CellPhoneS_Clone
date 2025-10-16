@@ -6,13 +6,10 @@ import ProductSide from "~/components/ProductSide/ProductSide"
 
 function HomePage() {
   return (
-    <Box sx={{ backgroundColor: 'white', height: '100vh', width: '100%' }}>
+    <Box sx={{ backgroundColor: 'white', height: '100vh', width: '100%', display: 'flex', flexDirection: 'column' }}>
         <AppBar />
         <Hero />
         <Banner/>
-        <ProductSide />
-        <ProductSide />
-        <ProductSide />
         <ProductSide />
     </Box>
   )

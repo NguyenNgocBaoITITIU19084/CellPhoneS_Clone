@@ -73,7 +73,7 @@ function AppBar() {
 
   return (
     <Box sx={{ width: '100%', margin: '0 auto', backgroundColor: 'primary.main', position: 'fixed', top: 0, zIndex: 10 }}>
-      <Box sx={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <Box sx={{ maxWidth: '1200px', margin: '0 auto', display: { lg: 'block', xs: 'none' } }}>
         <SliderAppBar />
       </Box>
       <Box 
@@ -93,7 +93,7 @@ function AppBar() {
             
 
             <StyledTextField id="filled-basic" variant="filled" size="small"  type="text" onChange={(e) => setSearch(e.target.value)} value={search}
-              sx={{ maxWidth: {md: '200px', lg: '350px'}, minWidth: '120px'}}
+              sx={{ maxWidth: { lg: '350px'}, minWidth: '120px'}}
               InputProps={{ 
                 disableUnderline: true, 
                 startAdornment: (<InputAdornment position="start"><SearchIcon sx={{ marginBottom: '17px'}}/></InputAdornment>),

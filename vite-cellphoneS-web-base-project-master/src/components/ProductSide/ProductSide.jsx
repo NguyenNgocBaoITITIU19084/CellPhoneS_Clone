@@ -10,6 +10,8 @@ const ProductContainer = styled(Box)({
   maxWidth: '1200px',
   margin: 'auto',
   marginTop: '1rem',
+  width: '100%',
+  padding: 2
 })
 
 const ProductWrapper = styled(Box)({
@@ -44,10 +46,10 @@ function ProductSide() {
           <MenuCategories/>
 
           {/* List Mobile Brands Container */}
-          <MobileBrands/>
+          {/* <MobileBrands/> */}
 
           {/* Product Cards Container */}
-          <ProductGridContainer>
+          {/* <ProductGridContainer>
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>
@@ -56,7 +58,7 @@ function ProductSide() {
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>
-          </ProductGridContainer>
+          </ProductGridContainer> */}
 
         </ListProductContainer>
 
