@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import Box from '@mui/material/Box'
 import AddBanner from './AdsBanner/AddBanner'
 import HeaderProduct from './HeaderListProduct/HeaderListProduct'
-import MenuCategories from './MenuCategories/MenuCategories'
+import MenuCategories from '~/components/MenuCategories/MenuCategories'
 import MobileBrands from './MobileBrands/MobileBrands'
 import ProductCard from '../ProductCard/ProductCard'
 
