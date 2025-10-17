@@ -6,7 +6,7 @@ import ProductSide from "~/components/ProductSide/ProductSide"
 
 function HomePage() {
   return (
-    <Box sx={{ backgroundColor: 'white', height: '100vh', width: '100%', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ backgroundColor: 'white', height: '100vh', width: '100%' }}>
         <AppBar />
         <Hero />
         <Banner/>

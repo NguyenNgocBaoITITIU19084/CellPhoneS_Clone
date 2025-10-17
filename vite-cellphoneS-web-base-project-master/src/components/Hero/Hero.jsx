@@ -103,10 +103,10 @@ const categories = [
 
 function Hero() {
   return (
-    <HeroContainer sx={{ mt: {lg: '100px', md: '70px', sm: '50px'} }}>
+    <HeroContainer sx={{ mt: {lg: '100px', md: '70px', sm: '50px', xs: '70px'} }}>
       <HeroContent>
 
-            <ContentBox sx={{display: {lg: 'block', md: 'none', xs: 'none'}, color: 'black', flex: 1, padding: '10px', height: 'max-content'}}>
+            <ContentBox sx={{display: {lg: 'block', md: 'none', sm: 'none' ,xs: 'none'}, color: 'black', flex: 1, padding: '10px', height: 'max-content'}}>
               <List>
                 {categories.map((category) => (
                   <Box key={category.id} sx={{ display: 'flex', alignItems: 'center', gap: 1, marginBottom: '8px', justifyContent: 'space-between', cursor: 'pointer', '&:hover': { backgroundColor: '#f5f5f5', borderRadius: '4px'} }}>

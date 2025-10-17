@@ -9,23 +9,24 @@ import ProductCard from '../ProductCard/ProductCard'
 const ProductContainer = styled(Box)({
   maxWidth: '1200px',
   margin: 'auto',
-  marginTop: '1rem',
   width: '100%',
-  padding: 2
+  padding: 1
 })
 
 const ProductWrapper = styled(Box)({
-  display: 'flex',
+  display: {xs: 'block', sm: 'flex'},
   gap: '1rem'
 })
 
 const ListProductContainer = styled(Box)({
-  flex: '6'
+  flex: '6', 
+  display: 'flex',
+  flexDirection: 'column'
 })
 
 const ProductGridContainer = styled(Box)({
   display: 'grid',
-  gridTemplateColumns: 'repeat(4, 1fr)'
+  // gridTemplateColumns: 'repeat(4, 1fr)'
 })
 
 function ProductSide() {
@@ -46,10 +47,10 @@ function ProductSide() {
           <MenuCategories/>
 
           {/* List Mobile Brands Container */}
-          {/* <MobileBrands/> */}
+          <MobileBrands/>
 
           {/* Product Cards Container */}
-          {/* <ProductGridContainer>
+          <ProductGridContainer sx={{ gridTemplateColumns: {xs: 'repeat(2, 1fr)'}, margin: '0 auto', gap: 1, padding: '10px' }}>
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>
@@ -58,7 +59,7 @@ function ProductSide() {
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>
-          </ProductGridContainer> */}
+          </ProductGridContainer>
 
         </ListProductContainer>
 

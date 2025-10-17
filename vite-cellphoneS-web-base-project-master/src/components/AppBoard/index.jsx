@@ -85,7 +85,7 @@ function AppBar() {
           flexDirection: 'column',
           justifyContent: 'center'
         }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, paddingX: 2, justifyContent: 'space-between'}}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, paddingX: 2, justifyContent: 'space-between'}}>
             <SvgIcon component={LogoIcon} inheritViewBox sx={{ width: '170px', maxWidth: '170px', cursor: 'pointer', display: {xs: 'none', lg: 'block'} }}/>
             <SvgIcon component={Slogo} inheritViewBox sx={{ width: '40px', maxWidth: '40px', height: '45px', cursor: 'pointer', display: {xs: 'block', lg: 'none'} }}/>
             <StyledButton variant="contained" startIcon={<DashboardCustomizeIcon/>} endIcon={<ExpandMoreIcon/>} sx={{ minWidth: '155px', display: {xs: 'none', md: 'flex' ,lg: 'flex'}}}>Danh mục</StyledButton>

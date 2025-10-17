@@ -9,12 +9,13 @@ const ContainerBox = styled(Box)({
 
 export default function Banner() {
   return (
-    <ContainerBox sx={{ margin: {lg: '30px auto', md: '70px auto', sm: '60px auto', xs: '10px auto'}}}>
+    <ContainerBox sx={{ margin: {lg: '30px auto', md: '70px auto', sm: '0 auto', xs: '0 auto'}}}>
       <Box
         sx={{
           borderRadius: '5px',
           width: '100%', 
-          height: '75px'
+          height: {xs: '60px', sm: '50px'},
+          objectFit: {xs: 'cover'}
         }}
         component='img' 
         src="https://cdn2.cellphones.com.vn/insecure/rs:fill:1200:75/q:90/plain/https://dashboard.cellphones.com.vn/storage/special-b2s-dday3-d.gif" 

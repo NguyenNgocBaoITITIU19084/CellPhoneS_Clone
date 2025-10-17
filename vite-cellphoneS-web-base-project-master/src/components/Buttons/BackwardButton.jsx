@@ -19,7 +19,7 @@ const BackwardButtonContainer = styled(Box)({
 function BackwardButton() {
   return (
     <>
-      <BackwardButtonContainer>
+      <BackwardButtonContainer sx={{ display: {xs: 'none'} }}>
         <ArrowBackIosNewIcon color='black' />
       </BackwardButtonContainer>
     </>

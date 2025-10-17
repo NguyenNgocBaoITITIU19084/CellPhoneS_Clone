@@ -4,11 +4,13 @@ import Box from '@mui/material/Box'
 const AdsBannerContainer = styled(Box)({
   flex: '1',
   flexDirection: 'column',
-  gap: '1rem'
+  gap: '1rem',
+  width: '100%'
 })
 
 const ImageBanner = styled(Box)({
-  maxWidth: '225px',
+  width: '100%',
+  minWidth: '80px',
   maxHeight: '555px',
   borderRadius: '1rem',
   cursor: 'pointer'
