@@ -9,7 +9,7 @@ const ContainerBox = styled(Box)({
 
 export default function Banner() {
   return (
-    <ContainerBox sx={{ margin: {lg: '30px auto', md: '70px auto', sm: '0 auto', xs: '0 auto'}}}>
+    <ContainerBox sx={{ margin: {lg: '30px auto', md: '70px auto', sm: 'auto', xs: 'auto'}, marginTop: {xs: '0', sm: '40px'}}}>
       <Box
         sx={{
           borderRadius: '5px',

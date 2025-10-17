@@ -14,12 +14,10 @@ const ProductContainer = styled(Box)({
 })
 
 const ProductWrapper = styled(Box)({
-  display: {xs: 'block', sm: 'flex'},
   gap: '1rem'
 })
 
 const ListProductContainer = styled(Box)({
-  flex: '6', 
   display: 'flex',
   flexDirection: 'column'
 })
@@ -33,13 +31,13 @@ function ProductSide() {
 
   return (
     <ProductContainer>
-      <ProductWrapper>
+      <ProductWrapper sx={{ display: {xs: 'block', sm: 'flex'}}}>
 
         {/* Ads Banner Container */}
         <AddBanner/>
 
         {/* List Product Menu */}
-        <ListProductContainer>
+        <ListProductContainer sx={{ flex: {xs: '6', sm: '5'}}}>
           {/* Header of List Product */}
           <HeaderProduct/>
 
@@ -50,7 +48,7 @@ function ProductSide() {
           <MobileBrands/>
 
           {/* Product Cards Container */}
-          <ProductGridContainer sx={{ gridTemplateColumns: {xs: 'repeat(2, 1fr)'}, margin: '0 auto', gap: 1, padding: '10px' }}>
+          <ProductGridContainer sx={{ gridTemplateColumns: {xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)'}, margin: '0 auto', gap: 1, padding: '10px' }}>
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>

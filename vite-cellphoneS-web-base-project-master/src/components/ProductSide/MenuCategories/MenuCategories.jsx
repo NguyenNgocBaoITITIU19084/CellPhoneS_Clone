@@ -111,7 +111,7 @@ function MenuCategories() {
   return (
     <>
       <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
-        <MenuCategoriesContainer sx={{ maxWidth: {xl: '990px',lg: '990px', md: '820px', sm: '770px', xs: '360px'} }}>
+        <MenuCategoriesContainer sx={{ maxWidth: {xl: '990px',lg: '990px', md: '820px', sm: '690px', xs: '360px'} }}>
           <BackwardButton sx={{ display: {lg: 'flex', md: 'flex', sm: 'none', xs: 'none'} }}>
             <ArrowBackIosNewIcon color='black' />
           </BackwardButton>

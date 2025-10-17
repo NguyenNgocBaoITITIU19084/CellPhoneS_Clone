@@ -88,8 +88,8 @@ function AppBar() {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, paddingX: 2, justifyContent: 'space-between'}}>
             <SvgIcon component={LogoIcon} inheritViewBox sx={{ width: '170px', maxWidth: '170px', cursor: 'pointer', display: {xs: 'none', lg: 'block'} }}/>
             <SvgIcon component={Slogo} inheritViewBox sx={{ width: '40px', maxWidth: '40px', height: '45px', cursor: 'pointer', display: {xs: 'block', lg: 'none'} }}/>
-            <StyledButton variant="contained" startIcon={<DashboardCustomizeIcon/>} endIcon={<ExpandMoreIcon/>} sx={{ minWidth: '155px', display: {xs: 'none', md: 'flex' ,lg: 'flex'}}}>Danh mục</StyledButton>
-            <StyledButton variant="contained" startIcon={<AddLocationAltIcon/>} endIcon={<ExpandMoreIcon />} sx={{ maxWidth: '170px', minWidth: '155px', display: {xs: 'none', md: 'flex' ,lg: 'flex'}}}>Ho Chi Minh</StyledButton>
+            <StyledButton variant="contained" startIcon={<DashboardCustomizeIcon/>} endIcon={<ExpandMoreIcon/>} sx={{ minWidth: '155px', display: {xs: 'none',sm: 'flex', md: 'flex' ,lg: 'flex'}}}>Danh mục</StyledButton>
+            <StyledButton variant="contained" startIcon={<AddLocationAltIcon/>} endIcon={<ExpandMoreIcon />} sx={{ maxWidth: '170px', minWidth: '155px', display: {xs: 'none',sm: 'flex', md: 'flex' ,lg: 'flex'}}}>Ho Chi Minh</StyledButton>
             
 
             <StyledTextField id="filled-basic" variant="filled" size="small"  type="text" onChange={(e) => setSearch(e.target.value)} value={search}
@@ -102,7 +102,7 @@ function AppBar() {
               }}
             />
             {/* For XS screen */}
-            <StyledButtonForXS variant="contained" startIcon={<AddLocationAltIcon/>} sx={{ maxWidth: '115px', minWidth: '115px', display: {xs: 'flex', md: 'none', lg: 'none'}}}>
+            <StyledButtonForXS variant="contained" startIcon={<AddLocationAltIcon/>} sx={{ maxWidth: '115px', minWidth: '115px', display: {xs: 'flex', sm:'none', md: 'none', lg: 'none'}}}>
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', lineHeight: '12px' }}>
                 <Typography variant='span' component='span' sx={{ textTransform: 'none', fontSize: '10px' }}>Xem Giá Tại</Typography>
                 <Typography variant='span' component='span' sx={{ textTransform: 'none', fontSize: '10px' }}>Hồ Chí Minh</Typography>
@@ -115,7 +115,7 @@ function AppBar() {
             <Box sx={{ display: { xs: 'flex', md: 'none', lg: 'none' }}}>
               <Badge badgeContent={4} color="warning"><ShoppingCartOutlinedIcon fontSize="medium"/></Badge>
             </Box>
-            <StyledButton variant="contained" endIcon={<AccountCircleOutlinedIcon/>} sx={{minWidth: '130px', display: { xs: 'none', md: 'flex', lg: 'flex' }}}>Đăng Nhập</StyledButton>
+            <StyledButton variant="contained" endIcon={<AccountCircleOutlinedIcon/>} sx={{minWidth: '130px', display: { xs: 'none', sm: 'flex',md: 'flex', lg: 'flex' }}}>Đăng Nhập</StyledButton>
 
           </Box>
       </Box>

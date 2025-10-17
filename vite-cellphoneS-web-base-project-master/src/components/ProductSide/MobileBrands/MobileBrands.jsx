@@ -113,7 +113,7 @@ function MobileBrands() {
     <>
       <MobileBrandsContainer>
         <Box sx={{ position: 'relative' }}>
-          <MobileBransWrapper sx={{ maxWidth: {xs: '350px'}}}>
+          <MobileBransWrapper sx={{ maxWidth: {xs: '350px', sm: '690px'}}}>
             <BackwardButton/>
             {MobileBrandsDummy.map((brand) => <BrandItem key={brand.id} label={brand.name} variant='outlined'  />)}
             <ForwardButton/>
