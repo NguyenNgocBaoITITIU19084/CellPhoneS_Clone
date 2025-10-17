@@ -48,7 +48,7 @@ function ProductSide() {
           <MobileBrands/>
 
           {/* Product Cards Container */}
-          <ProductGridContainer sx={{ gridTemplateColumns: {xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)'}, margin: '0 auto', gap: 1, padding: '10px' }}>
+          <ProductGridContainer sx={{ gridTemplateColumns: {xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)', md: 'repeat(4, 1fr)'}, margin: '0 auto', gap: 1, padding: '10px' }}>
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>

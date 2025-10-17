@@ -9,12 +9,12 @@ const ContainerBox = styled(Box)({
 
 export default function Banner() {
   return (
-    <ContainerBox sx={{ margin: {lg: '30px auto', md: '70px auto', sm: 'auto', xs: 'auto'}, marginTop: {xs: '0', sm: '40px'}}}>
+    <ContainerBox sx={{ margin: 'auto', marginTop: {xs: '0', sm: '40px', md: '40px', lg: '40px'}}}>
       <Box
         sx={{
           borderRadius: '5px',
           width: '100%', 
-          height: {xs: '60px', sm: '50px'},
+          height: {xs: '60px', sm: '50px', md: '60px', lg: '75px'},
           objectFit: {xs: 'cover'}
         }}
         component='img' 

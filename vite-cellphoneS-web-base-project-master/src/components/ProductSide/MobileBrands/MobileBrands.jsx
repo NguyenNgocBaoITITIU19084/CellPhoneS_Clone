@@ -119,7 +119,7 @@ function MobileBrands() {
             <ForwardButton/>
           </MobileBransWrapper>
         </Box>
-        <Chip label='Xem tất cả' color='primary' icon={<KeyboardDoubleArrowRightIcon/>} sx={{ cursor: 'pointer', display: {xs: 'none'}}}/>
+        <Chip label='Xem tất cả' color='primary' icon={<KeyboardDoubleArrowRightIcon/>} sx={{ cursor: 'pointer', display: {xs: 'none', md: 'flex'}}}/>
       </MobileBrandsContainer>
     </>
   )
