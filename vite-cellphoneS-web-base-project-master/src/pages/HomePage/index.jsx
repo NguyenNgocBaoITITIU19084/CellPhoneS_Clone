@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box"
 import AppBar from "~/components/AppBoard"
+import BottomAppBar from "~/components/AppBoard/BottomAppBar"
 import Banner from "~/components/Banner/Banner"
 import Hero from "~/components/Hero/Hero"
 import XsScreenCategories from "~/components/MenuCategories/XsScreenCategories"
@@ -13,6 +14,7 @@ function HomePage() {
         <Banner/>
         <XsScreenCategories />
         <ProductSide />
+        <BottomAppBar/>
     </Box>
   )
 }
