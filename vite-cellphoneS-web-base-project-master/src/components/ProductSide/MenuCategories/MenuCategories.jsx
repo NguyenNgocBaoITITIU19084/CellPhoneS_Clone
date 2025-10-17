@@ -53,21 +53,20 @@ const CategoriesDataDummy = [
 ]
 
 const MenuCategoriesContainer = styled(Box)({
-  height: '64px',
+  height: {xs: '40px'},
   marginTop: '0.5rem',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
   gap: 2,
-  maxWidth: '980px',
   overflow: 'auto',
-  '::-webkit-scrollbar': { display: 'none'}
+  '::-webkit-scrollbar': { display: 'none'},
+  scrollBehavior: 'smooth'
 })
 
 const CategoryItemBox = styled(Box)({
   minWidth: '160px',
-  minHeight: '60px',
-  maxHeight: '60px',
+  minHeight: {xs: '40px'},
   backgroundColor: 'rgb(242, 242, 243)',
   borderRadius: '0.5rem',
   padding: '4px',
@@ -111,9 +110,9 @@ const ForwardButton = styled(Box)({
 function MenuCategories() {
   return (
     <>
-      <Box sx={{ position: 'relative' }}>
-        <MenuCategoriesContainer>
-          <BackwardButton>
+      <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+        <MenuCategoriesContainer sx={{ maxWidth: {xl: '990px',lg: '990px', md: '820px', sm: '690px', xs: '360px'} }}>
+          <BackwardButton sx={{ display: {lg: 'flex', md: 'flex', sm: 'none', xs: 'none'} }}>
             <ArrowBackIosNewIcon color='black' />
           </BackwardButton>
           {CategoriesDataDummy.map((category) => 
@@ -124,7 +123,7 @@ function MenuCategories() {
               </Box>
             </CategoryItemBox>
           )}
-          <ForwardButton>
+          <ForwardButton sx={{ display: {lg: 'flex', md: 'flex', sm: 'none', xs: 'none'} }}>
             <ArrowForwardIosIcon/>
           </ForwardButton>
         </MenuCategoriesContainer>

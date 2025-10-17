@@ -85,7 +85,7 @@ const MobileBrandsDummy = [
 
 const MobileBrandsContainer = styled(Box)({
   maxHeight: '35px',
-  maxWidth: '1200px',
+  // maxWidth: '1200px',
   marginTop: '1rem',
   display: 'flex',
   justifyContent: 'space-between',
@@ -96,7 +96,7 @@ const MobileBransWrapper = styled(Box)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  maxWidth: '850px',
+  // maxWidth: '850px',
   overflowX: 'auto',
   '::-webkit-scrollbar': { display: 'none'}
 })
@@ -113,13 +113,13 @@ function MobileBrands() {
     <>
       <MobileBrandsContainer>
         <Box sx={{ position: 'relative' }}>
-          <MobileBransWrapper>
+          <MobileBransWrapper sx={{ maxWidth: {xs: '350px', sm: '690px'}}}>
             <BackwardButton/>
             {MobileBrandsDummy.map((brand) => <BrandItem key={brand.id} label={brand.name} variant='outlined'  />)}
             <ForwardButton/>
           </MobileBransWrapper>
         </Box>
-        <Chip label='Xem tất cả' color='primary' icon={<KeyboardDoubleArrowRightIcon/>} sx={{ cursor: 'pointer'}}/>
+        <Chip label='Xem tất cả' color='primary' icon={<KeyboardDoubleArrowRightIcon/>} sx={{ cursor: 'pointer', display: {xs: 'none', md: 'flex'}}}/>
       </MobileBrandsContainer>
     </>
   )

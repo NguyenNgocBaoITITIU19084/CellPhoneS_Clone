@@ -20,7 +20,7 @@ const ForwardButtonContainer = styled(Box)({
 function ForwardButton() {
   return (
     <>
-      <ForwardButtonContainer>
+      <ForwardButtonContainer sx={{ display: {xs: 'none'}}}>
         <ArrowForwardIosIcon/>
       </ForwardButtonContainer>
     </>

@@ -9,9 +9,9 @@ const HeaderListProduct = styled(Box)({
 
 const TextHeaderMenu = styled(Typography)({
   color: 'red',
-  height: '60px',
+
   borderBottom: '1px solid gray',
-  paddingTop: '10px',
+  paddingTop: {sm: '10px'},
   cursor: 'pointer'
 })
 
@@ -30,7 +30,7 @@ function HeaderProduct() {
             variant='h6' 
             fontWeight='bold' 
             textAlign='center'
-            sx={{ backgroundImage: activeHeader === 1 ? 'linear-gradient(to top, #ed8a95, white)': '', borderBottomColor: activeHeader === 1 ? '#df3346 !important': '' }}
+            sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', height: {xs: '40px', sm: '50px', md: '40px', lg: '50px'}, fontSize: '0.875rem',backgroundImage: activeHeader === 1 ? 'linear-gradient(to top, #ed8a95, white)': '', borderBottomColor: activeHeader === 1 ? '#df3346 !important': '' }}
             onClick={() => handleActiveHeader(1)}
           >Điện thoại
           </TextHeaderMenu>
@@ -40,7 +40,7 @@ function HeaderProduct() {
             variant='h6' 
             fontWeight='bold' 
             textAlign='center'
-            sx={{ backgroundImage: activeHeader === 2 ? 'linear-gradient(to top, #ed8a95, white)': '', borderBottomColor: activeHeader === 2 ? '#df3346 !important': '' }}
+            sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', height: {xs: '40px', sm: '50px', md: '40px', lg: '50px'}, fontSize: '0.875rem',backgroundImage: activeHeader === 2 ? 'linear-gradient(to top, #ed8a95, white)': '', borderBottomColor: activeHeader === 2 ? '#df3346 !important': '' }}
             onClick={() => handleActiveHeader(2)}
           >Máy tính bảng
           </TextHeaderMenu>

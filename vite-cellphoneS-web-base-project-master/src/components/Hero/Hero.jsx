@@ -20,10 +20,9 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ImageSlider from "./ImageSilder/ImageSlider"
 
 const HeroContainer = styled(Box)(({ theme }) => ({
-  height: theme.cell_phone.heroHeight,
+  maxHeight: theme.cell_phone.heroHeight,
   width: '100%',
   margin: '0 auto',
-  marginTop: '10px',
 }))
 
 const HeroContent = styled(Box)(({ theme }) => ({
@@ -32,7 +31,8 @@ const HeroContent = styled(Box)(({ theme }) => ({
   margin: '0 auto',
   display: 'flex',
   justifyContent: 'space-between',
-  gap: '15px'
+  gap: '15px',
+  padding: '10px'
 }))
 
 const ContentBox = styled(Box)`
@@ -103,14 +103,14 @@ const categories = [
 
 function Hero() {
   return (
-    <HeroContainer>
+    <HeroContainer sx={{ mt: {lg: '100px', md: '70px', sm: '50px', xs: '70px'} }}>
       <HeroContent>
 
-            <ContentBox sx={{ color: 'black', flex: 1, padding: '10px'}}>
+            <ContentBox sx={{display: {lg: 'block', md: 'none', sm: 'none' ,xs: 'none'}, color: 'black', flex: 1, padding: '10px', height: 'max-content'}}>
               <List>
                 {categories.map((category) => (
                   <Box key={category.id} sx={{ display: 'flex', alignItems: 'center', gap: 1, marginBottom: '8px', justifyContent: 'space-between', cursor: 'pointer', '&:hover': { backgroundColor: '#f5f5f5', borderRadius: '4px'} }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5}}>
                       <SvgIcon component={category.icon} inheritViewBox />
                       {category.names.map((name, index) => (
                         <Typography variant="span" fontSize='small' component='span' key={name}>{name}{index === category.names.length - 1 ? '' : ', '}</Typography>
@@ -123,15 +123,15 @@ function Hero() {
               </List>
             </ContentBox>
   
-            <ContentBox sx={{ color: 'black', flex: 3, maxWidth: '690px'}}>
+            <ContentBox sx={{ color: 'black', flex: 3, width: {lg: '60%', md: '70%', sm: '80%' ,xs: '90%'}, height: 'max-content'}}>
               <ImageSlider />
             </ContentBox>
 
-            <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1 , justifyContent: 'space-between'}}>
+            <Box sx={{ flex: 1, display: {lg: 'flex', md: 'flex', xs: 'none'}, flexDirection: 'column', gap: 1 , justifyContent: 'space-between'}}>
 
               <ContentBox sx={{ color: 'black', flex: 1}}>
                 <Box component='img' sx={{ height: '100%', width: '100%', objectFit: 'fill', borderRadius: '8px'}} src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/s25-0925-1.png" />
-               </ContentBox>
+              </ContentBox>
      
               <ContentBox sx={{ color: 'black', flex: 1}}>
                 <Box component='img' sx={{ height: '100%', width: '100%', objectFit: 'fill', borderRadius: '8px'}} src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/Camp-laptop-T9_Right-banner-1.png" />

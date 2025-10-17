@@ -9,34 +9,35 @@ import ProductCard from '../ProductCard/ProductCard'
 const ProductContainer = styled(Box)({
   maxWidth: '1200px',
   margin: 'auto',
-  marginTop: '1rem',
+  width: '100%',
+  padding: 1
 })
 
 const ProductWrapper = styled(Box)({
-  display: 'flex',
   gap: '1rem'
 })
 
 const ListProductContainer = styled(Box)({
-  flex: '6'
+  display: 'flex',
+  flexDirection: 'column'
 })
 
 const ProductGridContainer = styled(Box)({
   display: 'grid',
-  gridTemplateColumns: 'repeat(4, 1fr)'
+  // gridTemplateColumns: 'repeat(4, 1fr)'
 })
 
 function ProductSide() {
 
   return (
     <ProductContainer>
-      <ProductWrapper>
+      <ProductWrapper sx={{ display: {xs: 'block', sm: 'flex'}}}>
 
         {/* Ads Banner Container */}
         <AddBanner/>
 
         {/* List Product Menu */}
-        <ListProductContainer>
+        <ListProductContainer sx={{ flex: {xs: '6', sm: '5'}}}>
           {/* Header of List Product */}
           <HeaderProduct/>
 
@@ -47,7 +48,7 @@ function ProductSide() {
           <MobileBrands/>
 
           {/* Product Cards Container */}
-          <ProductGridContainer>
+          <ProductGridContainer sx={{ gridTemplateColumns: {xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)', md: 'repeat(4, 1fr)'}, margin: '0 auto', gap: 1, padding: '10px' }}>
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>
