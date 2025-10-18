@@ -44,6 +44,7 @@ const MENU_DATA = [
 const AppContainer = styled(Box)({
   width: '100%',
   minHeight: '70px',
+  maxHeight: '70px',
   backgroundColor: '#ecf0f1',
   flexDirection: 'column',
   justifyContent: 'center',
