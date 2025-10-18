@@ -3,6 +3,7 @@ import AppBar from "~/components/AppBoard"
 import BottomAppBar from "~/components/AppBoard/BottomAppBar"
 import Banner from "~/components/Banner/Banner"
 import Hero from "~/components/Hero/Hero"
+import XsScreenAccessories from "~/components/MenuCategories/XsScreenAccessories"
 import XsScreenCategories from "~/components/MenuCategories/XsScreenCategories"
 import ProductSide from "~/components/ProductSide/ProductSide"
 
@@ -14,6 +15,7 @@ function HomePage() {
         <Banner/>
         <XsScreenCategories />
         <ProductSide />
+        <XsScreenAccessories />
         <BottomAppBar/>
     </Box>
   )

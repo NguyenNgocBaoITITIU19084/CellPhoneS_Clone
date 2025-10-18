@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import Box from '@mui/material/Box'
-import Chip from '@mui/material/Chip'
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
 import BackwardButton from '~/components/Buttons/BackwardButton'
 import ForwardButton from '~/components/Buttons/ForwardButton'
+import Chip from '@mui/material/Chip'
+import ViewAllButton from '~/components/Buttons/ViewAllButton'
 
 const MobileBrandsDummy = [
   {
@@ -113,13 +113,13 @@ function MobileBrands() {
     <>
       <MobileBrandsContainer>
         <Box sx={{ position: 'relative' }}>
-          <MobileBransWrapper sx={{ maxWidth: {xs: '350px', sm: '690px'}}}>
+          <MobileBransWrapper sx={{ maxWidth: {xs: '350px', sm: '670px', md: '670px'}}}>
             <BackwardButton/>
             {MobileBrandsDummy.map((brand) => <BrandItem key={brand.id} label={brand.name} variant='outlined'  />)}
             <ForwardButton/>
           </MobileBransWrapper>
         </Box>
-        <Chip label='Xem tất cả' color='primary' icon={<KeyboardDoubleArrowRightIcon/>} sx={{ cursor: 'pointer', display: {xs: 'none', md: 'flex'}}}/>
+        <ViewAllButton/>
       </MobileBrandsContainer>
     </>
   )
