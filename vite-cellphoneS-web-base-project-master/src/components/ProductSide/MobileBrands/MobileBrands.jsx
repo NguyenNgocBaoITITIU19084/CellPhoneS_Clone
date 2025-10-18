@@ -89,7 +89,8 @@ const MobileBrandsContainer = styled(Box)({
   marginTop: '1rem',
   display: 'flex',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
+  gap: 1
 })
 
 const MobileBransWrapper = styled(Box)({
@@ -113,13 +114,13 @@ function MobileBrands() {
     <>
       <MobileBrandsContainer>
         <Box sx={{ position: 'relative' }}>
-          <MobileBransWrapper sx={{ maxWidth: {xs: '350px', sm: '670px', md: '670px'}}}>
+          <MobileBransWrapper sx={{ maxWidth: {xs: '350px', sm: '680px', md: '680px', lg: '850px', xl: '850px'}}}>
             <BackwardButton/>
             {MobileBrandsDummy.map((brand) => <BrandItem key={brand.id} label={brand.name} variant='outlined'  />)}
             <ForwardButton/>
           </MobileBransWrapper>
         </Box>
-        <ViewAllButton/>
+        <ViewAllButton sx={{ display: {xs: 'none', md: 'flex'} }}/>
       </MobileBrandsContainer>
     </>
   )

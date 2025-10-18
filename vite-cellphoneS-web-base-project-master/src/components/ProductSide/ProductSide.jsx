@@ -57,6 +57,7 @@ function ProductSide() {
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>
+            <ProductCard/>
           </ProductGridContainer>
 
         </ListProductContainer>
