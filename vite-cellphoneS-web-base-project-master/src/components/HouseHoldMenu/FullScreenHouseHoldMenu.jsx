@@ -113,21 +113,6 @@ const HOUSEHOLD_MENU = [
   },
 ]
 
-const LIST_TITLE = [
-  {
-    id: 1,
-    title: 'gia dụng nhà bếp',  
-  },
-  {
-    id: 2,
-    title: 'thiết bị gia đình',
-  },
-  {
-    id: 3,
-    title: 'sức khỏe - làm đẹp',
-  },
-]
-
 const HouseholdContainer = styled(Box)({
   width: '100%'
 })
