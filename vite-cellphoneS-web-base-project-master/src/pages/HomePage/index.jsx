@@ -2,6 +2,8 @@ import Box from "@mui/material/Box"
 import AppBar from "~/components/AppBoard"
 import BottomAppBar from "~/components/AppBoard/BottomAppBar"
 import Banner from "~/components/Banner/Banner"
+import BrandNews from "~/components/BrandNews/BrandNews"
+import DiscountNews from "~/components/DiscountNews/DiscountNews"
 import Hero from "~/components/Hero/Hero"
 import FullScreenHouseHoldMenu from "~/components/HouseHoldMenu/FullScreenHouseHoldMenu"
 import XsScreenHouseHoldMenu from "~/components/HouseHoldMenu/XsScreenHouseHoldMenu"
@@ -24,6 +26,8 @@ function HomePage() {
           <XsScreenAccessories />
           <XsScreenHouseHoldMenu/>
           <FullScreenHouseHoldMenu />
+          <DiscountNews />
+          <BrandNews title='Chuyên trang thương hiệu'/>
           <News />
           <BottomAppBar/>
         </Box>     
