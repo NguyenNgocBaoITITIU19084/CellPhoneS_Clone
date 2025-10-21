@@ -4,6 +4,7 @@ import BottomAppBar from "~/components/AppBoard/BottomAppBar"
 import Banner from "~/components/Banner/Banner"
 import BrandNews from "~/components/BrandNews/BrandNews"
 import DiscountNews from "~/components/DiscountNews/DiscountNews"
+import Footer from "~/components/Footer/Footer"
 import Hero from "~/components/Hero/Hero"
 import FullScreenHouseHoldMenu from "~/components/HouseHoldMenu/FullScreenHouseHoldMenu"
 import XsScreenHouseHoldMenu from "~/components/HouseHoldMenu/XsScreenHouseHoldMenu"
@@ -29,6 +30,7 @@ function HomePage() {
           <DiscountNews />
           <BrandNews title='Chuyên trang thương hiệu'/>
           <News />
+          <Footer />
           <BottomAppBar/>
         </Box>     
     </Box>
