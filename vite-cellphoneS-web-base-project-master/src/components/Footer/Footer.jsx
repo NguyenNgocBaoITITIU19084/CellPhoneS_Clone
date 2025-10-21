@@ -91,14 +91,11 @@ const FooterContainer = styled(Box)({
 const FooterWrapper = styled(Box)({
   maxWidth: '1200px',
   margin: '0 auto',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
+  display: 'grid',
   padding: '10px',
 })
 
 const FooterItemWrapper = styled(Box)({
-  flex: 1,
   display: 'flex',
   flexDirection: 'column',
   gap: 1
@@ -124,8 +121,8 @@ const Text = styled(Typography)({
 
 function Footer() {
   return (
-    <FooterContainer>
-      <FooterWrapper>
+    <FooterContainer marginBottom={9}>
+      <FooterWrapper sx={{ gridTemplateColumns: {xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)', xl: 'repeat(4, 1fr)'} }}>
         <FooterItemWrapper>
 
           <FooterItem>
